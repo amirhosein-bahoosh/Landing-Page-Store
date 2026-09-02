@@ -32,6 +32,9 @@
         font-family: "Roboto", sans-serif;
         box-sizing: border-box;
       }
+      * h5 {
+        font-size: 1rem;
+      }
       .navbar {
         width: 100%;
         background-color: black;
@@ -112,7 +115,7 @@
         transform: translateX(10px);
       }
       /* section product-categories */
-      .product-categories{
+      .product-categories {
         margin-top: 15px;
         display: flex;
         justify-content: space-around;
@@ -123,25 +126,29 @@
         align-items: center;
         border: 1px solid rgba(128, 128, 128, 0.229);
         border-radius: 8px;
+        margin: 5px 10px;
+        height: 100px;
+        width: 200px;
+        flex: 0 0 200px;
       }
-      .product-categoriy__img-Smartphones{
+      .product-categoriy__img-Smartphones {
         width: 60px;
         height: 60px;
         margin-right: 10px;
         margin-left: 10px;
       }
-      .product-categoriy__img-Headphones{
+      .product-categoriy__img-Headphones {
         width: 45px;
         height: 45px;
         margin-right: 10px;
         margin-left: 10px;
       }
-      .product-categoriy__img-Accessories{
+      .product-categoriy__img-Accessories {
         width: 60px;
         height: 60px;
         margin: 0 10px;
       }
-      .product-categoriy-content{
+      .product-categoriy-content {
         margin-right: 15px;
       }
       .product-categoriy-content > .product-categoriy__h5 {
@@ -154,6 +161,61 @@
       .product-categoriy__img {
         width: 90px;
         height: 90px;
+      }
+
+      @media (max-width: 502px) {
+        .product-categoriy-more {
+          display: block;
+        }
+        .product-categoriy {
+          margin: 0 0;
+        }
+        .more {
+          display: none;
+        }
+      }
+      /* best products */
+      .best-products-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .best-products__h2 {
+        margin-bottom: 25px;
+      }
+      .best-products-card {
+        border: 1px solid black;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        border-radius: 7px;
+      }
+      .best-products-card img {
+        width: 200px;
+        height: 100px;
+        margin-top: 40px;
+      }
+      .best-products-card-rate span:first-child {
+        color: yellow;
+      }
+      .best-products-card-btn {
+        color: white;
+        background-color: blue;
+        border-radius: 7px;
+        padding: 8px 12px;
+        border: none;
+        font-size: 1rem;
+        margin-bottom: 13px;
+      }
+      @media (max-width: 502px) {
+        .best-products-cards {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow: scroll;
+          gap: 10px;
+        }
       }
       /* .mobile */
       @media (max-width: 767px) {
@@ -619,7 +681,7 @@
           <p class="product-categoriy__p">40 Items</p>
         </div>
       </div>
-      <div class="product-categoriy">
+      <div class="product-categoriy more">
         <img
           class="product-categoriy__img-Headphones"
           src="./images/product-categories/head.jpg"
@@ -629,7 +691,7 @@
           <p class="product-categoriy__p">18 Items</p>
         </div>
       </div>
-      <div class="product-categoriy">
+      <div class="product-categoriy more">
         <img
           class="product-categoriy__img"
           src="./images/product-categories/wat.jpg"
@@ -639,7 +701,7 @@
           <p class="product-categoriy__p">20 Items</p>
         </div>
       </div>
-      <div class="product-categoriy">
+      <div class="product-categoriy more">
         <img
           class="product-categoriy__img-Accessories"
           src="./images/product-categories/game.jpg"
@@ -647,6 +709,76 @@
         <div class="product-categoriy-content">
           <h5 class="product-categoriy__h5">Accessories</h5>
           <p class="product-categoriy__p">30 Items</p>
+        </div>
+      </div>
+    </div>
+    <div class="best-products">
+      <h2 class="best-products__h2">Best Selling Products</h2>
+      <div class="best-products-cards">
+        <div class="best-products-card">
+          <img src="./images/best-products/laptop.png" />
+          <h5>Apple Macbook Air M2</h5>
+          <div class="best-products-card-rate">
+            <span>★★★★☆</span>
+            <span>(128)</span>
+          </div>
+          <div class="prices">
+            <strong>$1,199,00</strong>
+            <strike>$1,399,00</strike>
+          </div>
+          <button class="best-products-card-btn">🛒 Add to Cart</button>
+        </div>
+        <div class="best-products-card">
+          <img src="./images/best-products/laptop.png" />
+          <h5>Apple Macbook Air M2</h5>
+          <div class="best-products-card-rate">
+            <span>★★★★☆</span>
+            <span>(128)</span>
+          </div>
+          <div class="prices">
+            <strong>$1,199,00</strong>
+            <strike>$1,399,00</strike>
+          </div>
+          <button class="best-products-card-btn">🛒 Add to Cart</button>
+        </div>
+        <div class="best-products-card">
+          <img src="./images/best-products/laptop.png" />
+          <h5>Apple Macbook Air M2</h5>
+          <div class="best-products-card-rate">
+            <span>★★★★☆</span>
+            <span>(128)</span>
+          </div>
+          <div class="prices">
+            <strong>$1,199,00</strong>
+            <strike>$1,399,00</strike>
+          </div>
+          <button class="best-products-card-btn">🛒 Add to Cart</button>
+        </div>
+        <div class="best-products-card">
+          <img src="./images/best-products/laptop.png" />
+          <h5>Apple Macbook Air M2</h5>
+          <div class="best-products-card-rate">
+            <span>★★★★☆</span>
+            <span>(128)</span>
+          </div>
+          <div class="prices">
+            <strong>$1,199,00</strong>
+            <strike>$1,399,00</strike>
+          </div>
+          <button class="best-products-card-btn">🛒 Add to Cart</button>
+        </div>
+        <div class="best-products-card">
+          <img src="./images/best-products/laptop.png" />
+          <h5>Apple Macbook Air M2</h5>
+          <div class="best-products-card-rate">
+            <span>★★★★☆</span>
+            <span>(128)</span>
+          </div>
+          <div class="prices">
+            <strong>$1,199,00</strong>
+            <strike>$1,399,00</strike>
+          </div>
+          <button class="best-products-card-btn">🛒 Add to Cart</button>
         </div>
       </div>
     </div>
