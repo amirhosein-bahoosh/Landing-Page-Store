@@ -120,16 +120,15 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        gap: 10px;
       }
       .product-categoriy {
         display: flex;
         align-items: center;
         border: 1px solid rgba(128, 128, 128, 0.229);
         border-radius: 8px;
-        margin: 5px 10px;
         height: 100px;
         width: 200px;
-        flex: 0 0 200px;
       }
       .product-categoriy__img-Smartphones {
         width: 60px;
@@ -162,19 +161,34 @@
         width: 90px;
         height: 90px;
       }
-
+      .more-products {
+        display: none;
+      }
       @media (max-width: 502px) {
-        .product-categoriy-more {
-          display: block;
-        }
-        .product-categoriy {
-          margin: 0 0;
-        }
         .more {
           display: none;
         }
+        .more-products {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
       }
-      /* best products */
+        .more-products__img {
+          border: 1px solid black;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          object-fit: contain;
+          overflow: hidden;
+          transition: transform 1s ease;
+        }
+        .more-products__img:hover{
+          transform: scale(1.5);
+        }
+      }
+/* best products */
       .best-products-cards {
         display: flex;
         flex-wrap: wrap;
@@ -209,15 +223,7 @@
         font-size: 1rem;
         margin-bottom: 13px;
       }
-      @media (max-width: 502px) {
-        .best-products-cards {
-          display: flex;
-          flex-wrap: nowrap;
-          overflow: scroll;
-          gap: 10px;
-        }
-      }
-      /* .mobile */
+/* .mobile */
       @media (max-width: 767px) {
         .menus-text {
           flex-shrink: 0;
@@ -291,8 +297,14 @@
         .hero-content {
           padding: 20px;
         }
+                .best-products-cards {
+          display: flex;
+          flex-wrap: nowrap;
+          overflow: scroll;
+          gap: 10px;
+        }
       }
-      /* tablet 768 */
+/* tablet 768 */
       @media (min-width: 768px) and (max-width: 1023px) {
         .mobile-navbar {
           display: none;
@@ -349,7 +361,7 @@
           padding: 40px;
         }
       }
-      /* desktop */
+/* desktop */
       @media (min-width: 1024px) {
         .mobile-navbar {
           display: none;
@@ -709,6 +721,12 @@
         <div class="product-categoriy-content">
           <h5 class="product-categoriy__h5">Accessories</h5>
           <p class="product-categoriy__p">30 Items</p>
+        </div>
+      </div>
+      <div class="more-products">
+        <img class="more-products__img" src="./images/product-categories/more.jpg" />
+        <div class="more-products__h5">
+          <h5>More</h5>
         </div>
       </div>
     </div>
