@@ -189,13 +189,22 @@
         }
       }
 /* best products */
+      .best-products{
+        margin: 0 10px;
+      }
       .best-products-cards {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        justify-content: space-evenly;
       }
-      .best-products__h2 {
-        margin-bottom: 25px;
+      .best-products-title{
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .best-products-title__p{
+        color: blue;
       }
       .best-products-card {
         border: 1px solid black;
@@ -205,6 +214,9 @@
         align-items: center;
         gap: 13px;
         border-radius: 7px;
+      }
+      .best-products-card:hover {
+        background-color: rgba(255, 255, 255, 0.585);
       }
       .best-products-card img {
         width: 200px;
@@ -222,6 +234,11 @@
         border: none;
         font-size: 1rem;
         margin-bottom: 13px;
+        transition: all 1s ease-in-out;
+      }
+      .best-products-card-btn:hover{
+        transform: scale(0.9);
+        background-color: rgba(0, 89, 255, 0.869);
       }
 /* .mobile */
       @media (max-width: 767px) {
@@ -731,7 +748,10 @@
       </div>
     </div>
     <div class="best-products">
-      <h2 class="best-products__h2">Best Selling Products</h2>
+      <div class="best-products-title">
+        <h2 class="best-products-title__h2">Best Selling Products</h2>
+        <p class="best-products-title__p">View All</p>
+      </div>
       <div class="best-products-cards">
         <div class="best-products-card">
           <img src="./images/best-products/laptop.png" />
