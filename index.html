@@ -299,13 +299,11 @@
       /* features-bar */
       .features-bar {
         display: flex;
-        height: 100px;
-        /* border: 1px solid rgba(205, 91, 91, 0.283); */
         margin: 20px 10px;
         flex-wrap: wrap;
       }
       .features-item {
-        display: flex;
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 15px;
@@ -333,7 +331,6 @@
       .newsletter {
         min-height: 300px;
         display: flex;
-        /* border: 1px solid black; */
         border-radius: 10px;
         margin: 0 120px;
         background-image: url(./images/newsletter/illustration-with-letter-and-paper-airplane-free-vector-removebg-preview.png);
@@ -341,7 +338,7 @@
         background-position: right;
         background-repeat: no-repeat;
         background-color: rgb(229, 229, 251);
-        padding-left: 30px;
+        padding-left: 50px;
         padding-top: 50px;
       }
       .newsletter-content {
@@ -360,8 +357,38 @@
         width: 70px;
         height: 70px;
       }
-      
-      
+      .newsletter-content form{
+        display: flex;
+        box-shadow: 0 0 3px blue;
+        border-radius: 7px 7px 0 7px;
+        min-width: 315px;
+      }
+      .newsletter-content__input{
+        border: none;
+        height: 45px;
+        width: 100%;
+        border-radius: 7px 0px 0px 7px;
+      }
+      .newsletter-content__button{
+        border: none;
+        background-color: blue;
+        height: 45px;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 0px 7px 0 7px;
+      }
+      @media (max-width: 950px) {
+        .newsletter-content__svg{
+          display: none;
+        }
+        .newsletter{
+          padding: 50px 0;
+          margin: 0;
+        }
+        .newsletter-content {
+          margin: 0;
+        }
+      }
       /* .mobile */
       @media (max-width: 767px) {
         .menus-text {
@@ -1068,8 +1095,8 @@
             discounts.
           </p>
           <form>
-            <input type="email" placeholder="Enter your email" />
-            <button>Subscribe</button>
+            <input class="newsletter-content__input" type="email" placeholder="Enter your email" />
+            <button class="newsletter-content__button">Subscribe</button>
           </form>
       </div>
     </div>
